@@ -15,6 +15,10 @@ export default function Game({ gameState }) {
             className="mural-img"
             alt="Smash Bros Ultimate Mural"
             src={muralImg}
+            onClick={(e) => {
+              console.log(e.clientX)
+              console.log(e.target.offset)
+            }}
           ></img>
         }
       </div>
