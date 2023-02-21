@@ -1,12 +1,7 @@
 import muralImg from "../images/mural-quarter.jpg"
 import CharacterCard from "./CharacterCard"
 
-import charData from "../character-data.json"
-
-const charDataByName = {}
-charData.characters.forEach((char) => {
-  charDataByName[char.name] = char
-})
+import { charData, charDataByName } from "../util"
 
 const xTolerance = 0.025
 const yTolerance = 0.3
@@ -45,7 +40,7 @@ function isValidGuess(character, xPct, yPct) {
   )
 }
 
-export default function Game({ gameState, dispatch }) {
+export default function Game({ gameState, dispatch, imgLocs }) {
   return (
     <div className="game-container flex-col">
       <div className="character-cards-container flex">
@@ -56,6 +51,7 @@ export default function Game({ gameState, dispatch }) {
               character={char}
               rawName={charDataByName[char].rawName}
               found={gameState.charsFound.includes(char)}
+              imgLoc={imgLocs[i]}
             />
           )
         })}
@@ -104,13 +100,13 @@ export default function Game({ gameState, dispatch }) {
                       isValidGuess(name, promptXPct, promptYPct)
                     ) {
                       dispatch({ type: "find_character", name: name })
-                      console.log("Yes! You found " + name)
                     }
                     dispatch({ type: "hide_prompt" })
                   }}
-                >
-                  {charDataByName[name].rawName}
-                </li>
+                  dangerouslySetInnerHTML={{
+                    __html: charDataByName[name].rawName,
+                  }}
+                ></li>
               )
             })}
           </ul>

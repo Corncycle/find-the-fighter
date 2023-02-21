@@ -4,15 +4,30 @@ import TopBar from "./components/TopBar"
 
 import muralImg from "./images/mural-quarter.jpg"
 
-import { useReducer, useEffect } from "react"
+import { useReducer, useEffect, useState } from "react"
+
+import { sampleSize } from "lodash"
+
+import { charNames } from "./util"
+
+const imgs = require.context("./images/thumbnails", false)
 
 function gameStateReducer(state, action) {
   switch (action.type) {
     case "start_game": {
-      console.log("starting game")
       return {
         ...state,
         playing: true,
+        charsToFind: state.queuedCharsToFind,
+        queuedCharsToFind: action.nextCharacters,
+        charsFound: [],
+        promptShown: false,
+      }
+    }
+    case "enqueue_characters": {
+      return {
+        ...state,
+        queuedCharsToFind: action.nextCharacters,
       }
     }
     case "end_game": {
@@ -52,16 +67,36 @@ function gameStateReducer(state, action) {
 function App() {
   const [gameState, dispatch] = useReducer(gameStateReducer, {
     playing: false,
-    charsToFind: ["mario", "luigi", "shizue"],
+    charsToFind: [],
+    queuedCharsToFind: [],
     charsFound: [],
     promptShown: false,
   })
 
+  const [currImgs, setCurrImgs] = useState([])
+  const [queuedImgs, setQueuedImgs] = useState([])
+
+  // used for preloading individual character images for responsiveness
+  function imgsByArr(arr) {
+    const out = []
+    for (const char of arr) {
+      // preload image
+      const img = new Image()
+      img.src = imgs("./" + char + ".png")
+      out.push(imgs("./" + char + ".png"))
+    }
+    return out
+  }
+
   useEffect(() => {
-    console.log("initializing")
     // preload mural image (because it is large)
     const img = new Image()
     img.src = muralImg
+
+    const newChars = sampleSize(charNames, 3)
+    setQueuedImgs(imgsByArr(newChars))
+
+    dispatch({ type: "enqueue_characters", nextCharacters: newChars })
   }, [])
 
   useEffect(() => {
@@ -79,11 +114,16 @@ function App() {
     >
       <TopBar />
       {gameState.playing ? (
-        <Game gameState={gameState} dispatch={dispatch} />
+        <Game gameState={gameState} dispatch={dispatch} imgLocs={currImgs} />
       ) : (
         <Instructions
           startGameFunction={() => {
-            dispatch({ type: "start_game" })
+            const newChars = sampleSize(charNames, 3)
+            const safeQueued = [...queuedImgs]
+            setCurrImgs(safeQueued)
+            setQueuedImgs(imgsByArr(newChars))
+
+            dispatch({ type: "start_game", nextCharacters: newChars })
           }}
         />
       )}
