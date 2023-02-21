@@ -199,7 +199,7 @@ html, body, #root {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    gap: 8px;
+    gap: 6px;
     padding: 10px;
     position: absolute;
     background: rgb(40 40 40 / 80%);
@@ -218,7 +218,7 @@ html, body, #root {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    padding: 8px;
+    padding: 4px 8px;
     border-radius: 4px;
     background: rgb(0 0 0 / 60%);
     color: white;

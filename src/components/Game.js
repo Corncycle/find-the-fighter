@@ -1,6 +1,11 @@
 import muralImg from "../images/mural-quarter.jpg"
 import CharacterCard from "./CharacterCard"
 
+import charData from "../character-data.json"
+
+const xTolerance = 0.025
+const yTolerance = 0.3
+
 let promptX = 0
 let promptY = 0
 let promptFlipped = false
@@ -17,6 +22,24 @@ function updatePromptLocation() {
   }
 }
 
+function isValidGuess(character, xPct, yPct) {
+  let char
+  for (const c of charData.characters) {
+    if (c.name === character) {
+      char = c
+      break
+    }
+  }
+  return (
+    xPct <= char.x + xTolerance &&
+    xPct >= char.x - xTolerance &&
+    yPct >= char.y &&
+    yPct <= char.y + yTolerance
+  )
+}
+
+const exampleChar = "lucas"
+
 export default function Game({ gameState, dispatch }) {
   return (
     <div className="game-container flex-col">
@@ -31,6 +54,16 @@ export default function Game({ gameState, dispatch }) {
             className="mural-img"
             alt="Smash Bros Ultimate Mural"
             src={muralImg}
+            onMouseMove={(e) => {
+              const rect = e.target.getBoundingClientRect()
+              const xPct = (e.clientX - rect.left) / e.target.width
+              const yPct = (e.clientY - rect.top) / e.target.height
+              if (isValidGuess(exampleChar, xPct, yPct)) {
+                e.target.style.cursor = "pointer"
+              } else {
+                e.target.style.cursor = "auto"
+              }
+            }}
             onClick={(e) => {
               e.stopPropagation()
               dispatch({ type: "show_prompt" })
