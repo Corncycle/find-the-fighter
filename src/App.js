@@ -15,6 +15,18 @@ function gameStateReducer(state, action) {
         playing: true,
       }
     }
+    case "show_prompt": {
+      return {
+        ...state,
+        promptShown: true,
+      }
+    }
+    case "hide_prompt": {
+      return {
+        ...state,
+        promptShown: false,
+      }
+    }
     default: {
       throw new Error(`Unhandled action ${action.type}`)
     }
@@ -26,6 +38,7 @@ function App() {
     playing: false,
     charsToFind: ["mario", "luigi", "shizue"],
     charsFound: [],
+    promptShown: false,
   })
 
   useEffect(() => {
@@ -36,10 +49,15 @@ function App() {
   }, [])
 
   return (
-    <div className="main-container flex-col">
+    <div
+      className="main-container flex-col"
+      onClick={() => {
+        dispatch({ type: "hide_prompt" })
+      }}
+    >
       <TopBar />
       {gameState.playing ? (
-        <Game gameState={gameState} />
+        <Game gameState={gameState} dispatch={dispatch} />
       ) : (
         <Instructions
           startGameFunction={() => {

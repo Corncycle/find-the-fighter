@@ -21,6 +21,10 @@ html, body, #root {
     height: 100%;
 }
 
+.hidden {
+    display: none;
+}
+
 .flex {
     display: flex;
 }
@@ -163,19 +167,83 @@ html, body, #root {
     opacity: 1;
 }
 
-.mural-outer-container {
-    flex: 1;
-    width: 100%;
-}
 
 .mural-img-container {
+    position: relative;
     width: 100%;
     overflow-x: scroll;
-    background-color: plum;
+    overflow-y: hidden;
     /*background-image: url("../images/mural-quarter.jpg");
     background-size: cover;*/
 }
 
 .mural-img {
     height: calc(80vh - 5rem);
+}
+
+.prompt-container {
+    position: absolute;
+    pointer-events: none;
+}
+
+.prompt-outline {
+    position: absolute;
+    width: calc((80vh - 5rem) / 6);
+    height: calc((80vh - 5rem) / 6);
+    border: 5px solid var(--border-color-1);
+    animation: 1s infinite fake-gradient
+}
+
+.prompt-names-container {
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 8px;
+    padding: 10px;
+    position: absolute;
+    background: rgb(40 40 40 / 80%);
+    left: calc(10px + (80vh - 5rem) / 6);
+    top: calc((80vh - 5rem) / 12);
+    transform: translateY(-50%);
+    border-radius: 8px;
+}
+
+.prompt-names-container.flipped {
+    left: 0;
+    transform: translate(calc(-100% - 10px), -50%);
+}
+
+.prompt-name {
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    background: rgb(0 0 0 / 60%);
+    color: white;
+}
+
+@keyframes gradient {
+    0% {
+        background-position-x: 200%;
+    }
+
+    100% {
+        background-position-x: 0%;
+    }
+}
+
+@keyframes fake-gradient {
+    0% {
+        border-color: var(--border-color-1);
+    }
+    
+    50% {
+        border-color: var(--border-color-2);
+    }
+
+    100% {
+        border-color: var(--border-color-1);
+    }
 }
