@@ -167,6 +167,9 @@ html, body, #root {
     opacity: 1;
 }
 
+.found {
+    filter:brightness(0.5);
+}
 
 .mural-img-container {
     position: relative;
@@ -179,6 +182,7 @@ html, body, #root {
 
 .mural-img {
     height: calc(80vh - 5rem);
+    cursor: pointer;
 }
 
 .prompt-container {
@@ -222,6 +226,11 @@ html, body, #root {
     border-radius: 4px;
     background: rgb(0 0 0 / 60%);
     color: white;
+}
+
+.prompt-name:hover {
+    background: rgb(255 255 255 / 60%);
+    color: black;
 }
 
 @keyframes gradient {

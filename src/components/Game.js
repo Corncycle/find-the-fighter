@@ -3,11 +3,18 @@ import CharacterCard from "./CharacterCard"
 
 import charData from "../character-data.json"
 
+const charDataByName = {}
+charData.characters.forEach((char) => {
+  charDataByName[char.name] = char
+})
+
 const xTolerance = 0.025
 const yTolerance = 0.3
 
 let promptX = 0
 let promptY = 0
+let promptXPct = 0
+let promptYPct = 0
 let promptFlipped = false
 
 function updatePromptLocation() {
@@ -38,14 +45,19 @@ function isValidGuess(character, xPct, yPct) {
   )
 }
 
-const exampleChar = "lucas"
-
 export default function Game({ gameState, dispatch }) {
   return (
     <div className="game-container flex-col">
       <div className="character-cards-container flex">
         {gameState.charsToFind.map((char, i) => {
-          return <CharacterCard key={i} character={char} />
+          return (
+            <CharacterCard
+              key={i}
+              character={char}
+              rawName={charDataByName[char].rawName}
+              found={gameState.charsFound.includes(char)}
+            />
+          )
         })}
       </div>
       <div className="mural-img-container flex">
@@ -54,16 +66,6 @@ export default function Game({ gameState, dispatch }) {
             className="mural-img"
             alt="Smash Bros Ultimate Mural"
             src={muralImg}
-            onMouseMove={(e) => {
-              const rect = e.target.getBoundingClientRect()
-              const xPct = (e.clientX - rect.left) / e.target.width
-              const yPct = (e.clientY - rect.top) / e.target.height
-              if (isValidGuess(exampleChar, xPct, yPct)) {
-                e.target.style.cursor = "pointer"
-              } else {
-                e.target.style.cursor = "auto"
-              }
-            }}
             onClick={(e) => {
               e.stopPropagation()
               dispatch({ type: "show_prompt" })
@@ -74,6 +76,9 @@ export default function Game({ gameState, dispatch }) {
               promptFlipped = x / e.target.width > 0.9
               promptX = x
               promptY = y
+              promptXPct = x / e.target.width
+              promptYPct = y / e.target.height
+
               updatePromptLocation()
             }}
           ></img>
@@ -88,9 +93,26 @@ export default function Game({ gameState, dispatch }) {
         >
           <div className="prompt-outline"></div>
           <ul className="prompt-names-container">
-            <li className="prompt-name">Mario</li>
-            <li className="prompt-name">luigio</li>
-            <li className="prompt-name">shizue</li>
+            {gameState.charsToFind.map((name, i) => {
+              return (
+                <li
+                  key={i}
+                  className="prompt-name"
+                  onClick={(e) => {
+                    if (
+                      !gameState.charsFound.includes(name) &&
+                      isValidGuess(name, promptXPct, promptYPct)
+                    ) {
+                      dispatch({ type: "find_character", name: name })
+                      console.log("Yes! You found " + name)
+                    }
+                    dispatch({ type: "hide_prompt" })
+                  }}
+                >
+                  {charDataByName[name].rawName}
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>

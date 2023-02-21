@@ -15,6 +15,12 @@ function gameStateReducer(state, action) {
         playing: true,
       }
     }
+    case "end_game": {
+      return {
+        ...state,
+        playing: false,
+      }
+    }
     case "show_prompt": {
       return {
         ...state,
@@ -25,6 +31,16 @@ function gameStateReducer(state, action) {
       return {
         ...state,
         promptShown: false,
+      }
+    }
+    case "find_character": {
+      if (state.charsFound.includes(action.name)) {
+        return { ...state }
+      } else {
+        return {
+          ...state,
+          charsFound: state.charsFound.concat([action.name]),
+        }
       }
     }
     default: {
@@ -47,6 +63,12 @@ function App() {
     const img = new Image()
     img.src = muralImg
   }, [])
+
+  useEffect(() => {
+    if (gameState.charsFound.length === 3) {
+      dispatch({ type: "end_game" })
+    }
+  }, [gameState.charsFound])
 
   return (
     <div
