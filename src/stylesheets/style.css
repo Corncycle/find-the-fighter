@@ -99,6 +99,8 @@ html, body, #root {
     text-transform: capitalize;
     font-size: 1.3rem;
     font-weight: 300;
+    text-decoration: none;
+    color: white;
 }
 
 .topbar-option:hover {

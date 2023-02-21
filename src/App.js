@@ -5,10 +5,12 @@ import TopBar from "./components/TopBar"
 import muralImg from "./images/mural-quarter.jpg"
 
 import { useReducer, useEffect, useState } from "react"
-
+import { HashRouter, Routes, Route } from "react-router-dom"
 import { sampleSize } from "lodash"
 
 import { charNames } from "./util"
+import About from "./components/About"
+import Scores from "./components/Scores"
 
 const imgs = require.context("./images/thumbnails", false)
 
@@ -112,21 +114,36 @@ function App() {
         dispatch({ type: "hide_prompt" })
       }}
     >
-      <TopBar />
-      {gameState.playing ? (
-        <Game gameState={gameState} dispatch={dispatch} imgLocs={currImgs} />
-      ) : (
-        <Instructions
-          startGameFunction={() => {
-            const newChars = sampleSize(charNames, 3)
-            const safeQueued = [...queuedImgs]
-            setCurrImgs(safeQueued)
-            setQueuedImgs(imgsByArr(newChars))
+      <HashRouter>
+        <TopBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              gameState.playing ? (
+                <Game
+                  gameState={gameState}
+                  dispatch={dispatch}
+                  imgLocs={currImgs}
+                />
+              ) : (
+                <Instructions
+                  startGameFunction={() => {
+                    const newChars = sampleSize(charNames, 3)
+                    const safeQueued = [...queuedImgs]
+                    setCurrImgs(safeQueued)
+                    setQueuedImgs(imgsByArr(newChars))
 
-            dispatch({ type: "start_game", nextCharacters: newChars })
-          }}
-        />
-      )}
+                    dispatch({ type: "start_game", nextCharacters: newChars })
+                  }}
+                />
+              )
+            }
+          />
+          <Route path="/scores" element={<Scores />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </HashRouter>
     </div>
   )
 }

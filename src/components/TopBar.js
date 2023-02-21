@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function TopBar() {
   const options = ["play", "scores", "about"]
 
@@ -7,9 +9,13 @@ export default function TopBar() {
       <ul className="topbar-options-container flex">
         {options.reduce((prev, curr, i) => {
           let newArr = prev.concat([
-            <li className="topbar-option" key={i}>
+            <Link
+              to={curr === "play" ? "" : curr}
+              className="topbar-option"
+              key={i}
+            >
               {curr}
-            </li>,
+            </Link>,
           ])
           if (i < options.length - 1) {
             newArr = newArr.concat([
