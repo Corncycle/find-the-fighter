@@ -1,676 +1,509 @@
 {
-    "characters":[
-       {
-          "rawName":"PIRANHA PLANT",
-          "name":"packun_flower",
-          "coordinates":[
-             0.27510460251046026,
-             0.896421845574388
-          ]
-       },
-       {
-          "rawName":"JOKER",
-          "name":"joker",
-          "coordinates":[
-             0.6649232914923291,
-             0.7024482109227872
-          ]
-       },
-       {
-          "rawName":"HERO",
-          "name":"dq_hero",
-          "coordinates":[
-             0.6377266387726639,
-             0.943502824858757
-          ]
-       },
-       {
-          "rawName":"BANJO &amp; KAZOOIE",
-          "name":"banjo_and_kazooie",
-          "coordinates":[
-             0.07147838214783822,
-             0.391713747645951
-          ]
-       },
-       {
-          "rawName":"TERRY",
-          "name":"terry",
-          "coordinates":[
-             0.698744769874477,
-             0.7344632768361582
-          ]
-       },
-       {
-          "rawName":"BYLETH",
-          "name":"byleth",
-          "coordinates":[
-             0.19735006973500696,
-             0.7645951035781544
-          ]
-       },
-       {
-          "rawName":"MIN MIN",
-          "name":"minmin",
-          "coordinates":[
-             0.6952580195258019,
-             0.935969868173258
-          ]
-       },
-       {
-          "rawName":"STEVE / ALEX",
-          "name":"steve",
-          "coordinates":[
-             0.14435146443514643,
-             1.0753295668549905
-          ]
-       },
-       {
-          "rawName":"SEPHIROTH",
-          "name":"sephiroth",
-          "coordinates":[
-             0.4525801952580195,
-             0.7325800376647834
-          ]
-       },
-       {
-          "rawName":"PYRA / MYTHRA",
-          "name":"homura",
-          "coordinates":[
-             0.7566248256624826,
-             0.4425612052730697
-          ]
-       },
-       {
-          "rawName":"KAZUYA",
-          "name":"kazuya",
-          "coordinates":[
-             0.16701534170153418,
-             0.711864406779661
-          ]
-       },
-       {
-          "rawName":"SORA",
-          "name":"sora",
-          "coordinates":[
-             0.6345885634588564,
-             0.3954802259887006
-          ]
-       },
-       {
-          "rawName":"MARIO",
-          "name":"mario",
-          "coordinates":[
-             0.8253138075313807,
-             0.4218455743879473
-          ]
-       },
-       {
-          "rawName":"DONKEY KONG",
-          "name":"donkey_kong",
-          "coordinates":[
-             0.5376569037656904,
-             0.4764595103578154
-          ]
-       },
-       {
-          "rawName":"LINK",
-          "name":"link",
-          "coordinates":[
-             0.11541143654114365,
-             0.4387947269303202
-          ]
-       },
-       {
-          "rawName":"SAMUS",
-          "name":"samus",
-          "coordinates":[
-             0.45571827057182707,
-             0.4915254237288136
-          ]
-       },
-       {
-          "rawName":"DARK SAMUS",
-          "name":"dark_samus",
-          "coordinates":[
-             0.5993723849372385,
-             0.4293785310734463
-          ]
-       },
-       {
-          "rawName":"YOSHI",
-          "name":"yoshi",
-          "coordinates":[
-             0.3880753138075314,
-             0.6252354048964218
-          ]
-       },
-       {
-          "rawName":"KIRBY",
-          "name":"kirby",
-          "coordinates":[
-             0.5003486750348675,
-             0.5612052730696798
-          ]
-       },
-       {
-          "rawName":"FOX",
-          "name":"fox",
-          "coordinates":[
-             0.48640167364016734,
-             0.7175141242937854
-          ]
-       },
-       {
-          "rawName":"PIKACHU",
-          "name":"pikachu",
-          "coordinates":[
-             0.48570432357043236,
-             1.0263653483992468
-          ]
-       },
-       {
-          "rawName":"LUIGI",
-          "name":"luigi",
-          "coordinates":[
-             0.23221757322175732,
-             0.3954802259887006
-          ]
-       },
-       {
-          "rawName":"NESS",
-          "name":"ness",
-          "coordinates":[
-             0.7799860529986054,
-             0.6384180790960452
-          ]
-       },
-       {
-          "rawName":"CAPTAIN FALCON",
-          "name":"captain_falcon",
-          "coordinates":[
-             0.9553695955369595,
-             0.6440677966101694
-          ]
-       },
-       {
-          "rawName":"JIGGLYPUFF",
-          "name":"jigglypuff",
-          "coordinates":[
-             0.8155509065550907,
-             1.0451977401129944
-          ]
-       },
-       {
-          "rawName":"PEACH",
-          "name":"peach",
-          "coordinates":[
-             0.7890516039051604,
-             0.4256120527306968
-          ]
-       },
-       {
-          "rawName":"DAISY",
-          "name":"daisy",
-          "coordinates":[
-             0.14435146443514643,
-             0.8907721280602636
-          ]
-       },
-       {
-          "rawName":"BOWSER",
-          "name":"bowser",
-          "coordinates":[
-             0.35564853556485354,
-             0.6534839924670434
-          ]
-       },
-       {
-          "rawName":"ICE CLIMBERS",
-          "name":"ice_climbers",
-          "coordinates":[
-             0.03730822873082287,
-             0.4613935969868173
-          ]
-       },
-       {
-          "rawName":"SHEIK",
-          "name":"sheik",
-          "coordinates":[
-             0.39504881450488144,
-             0.4312617702448211
-          ]
-       },
-       {
-          "rawName":"ZELDA",
-          "name":"zelda",
-          "coordinates":[
-             0.40446304044630405,
-             0.8116760828625236
-          ]
-       },
-       {
-          "rawName":"DR. MARIO",
-          "name":"dr_mario",
-          "coordinates":[
-             0.04218967921896792,
-             0.9397363465160076
-          ]
-       },
-       {
-          "rawName":"PICHU",
-          "name":"pichu",
-          "coordinates":[
-             0.4630404463040446,
-             0.8775894538606404
-          ]
-       },
-       {
-          "rawName":"FALCO",
-          "name":"falco",
-          "coordinates":[
-             0.3608786610878661,
-             0.4256120527306968
-          ]
-       },
-       {
-          "rawName":"MARTH",
-          "name":"marth",
-          "coordinates":[
-             0.6237796373779637,
-             0.8116760828625236
-          ]
-       },
-       {
-          "rawName":"LUCINA",
-          "name":"lucina",
-          "coordinates":[
-             0.9285216178521618,
-             0.5856873822975518
-          ]
-       },
-       {
-          "rawName":"YOUNG LINK",
-          "name":"young_link",
-          "coordinates":[
-             0.7357043235704324,
-             0.7325800376647834
-          ]
-       },
-       {
-          "rawName":"GANONDORF",
-          "name":"ganondorf",
-          "coordinates":[
-             0.6642259414225942,
-             0.4180790960451977
-          ]
-       },
-       {
-          "rawName":"MEWTWO",
-          "name":"mewtwo",
-          "coordinates":[
-             0.25592747559274753,
-             0.5235404896421846
-          ]
-       },
-       {
-          "rawName":"ROY",
-          "name":"roy",
-          "coordinates":[
-             0.5847280334728033,
-             0.7853107344632768
-          ]
-       },
-       {
-          "rawName":"CHROM",
-          "name":"chrom",
-          "coordinates":[
-             0.9755927475592747,
-             0.7608286252354048
-          ]
-       },
-       {
-          "rawName":"MR. GAME &amp; WATCH",
-          "name":"mr_game_and_watch",
-          "coordinates":[
-             0.014644351464435146,
-             0.943502824858757
-          ]
-       },
-       {
-          "rawName":"META KNIGHT",
-          "name":"meta_knight",
-          "coordinates":[
-             0.9257322175732218,
-             0.4670433145009416
-          ]
-       },
-       {
-          "rawName":"PIT",
-          "name":"pit",
-          "coordinates":[
-             0.4891910739191074,
-             0.4274952919020716
-          ]
-       },
-       {
-          "rawName":"DARK PIT",
-          "name":"dark_pit",
-          "coordinates":[
-             0.32217573221757323,
-             0.4143126177024482
-          ]
-       },
-       {
-          "rawName":"ZERO SUIT SAMUS",
-          "name":"zero_suit_samus",
-          "coordinates":[
-             0.6206415620641562,
-             0.6271186440677966
-          ]
-       },
-       {
-          "rawName":"WARIO",
-          "name":"wario",
-          "coordinates":[
-             0.854602510460251,
-             0.9585687382297552
-          ]
-       },
-       {
-          "rawName":"SNAKE",
-          "name":"snake",
-          "coordinates":[
-             0.2290794979079498,
-             0.9171374764595104
-          ]
-       },
-       {
-          "rawName":"IKE",
-          "name":"ike",
-          "coordinates":[
-             0.3186889818688982,
-             0.800376647834275
-          ]
-       },
-       {
-          "rawName":"POKÉMON TRAINER",
-          "name":"pokemon_trainer",
-          "coordinates":[
-             0.7496513249651325,
-             0.9152542372881356
-          ]
-       },
-       {
-          "rawName":"DIDDY KONG",
-          "name":"diddy_kong",
-          "coordinates":[
-             0.4306136680613668,
-             0.4105461393596987
-          ]
-       },
-       {
-          "rawName":"LUCAS",
-          "name":"lucas",
-          "coordinates":[
-             0.2615062761506276,
-             0.6836158192090396
-          ]
-       },
-       {
-          "rawName":"SONIC",
-          "name":"sonic",
-          "coordinates":[
-             0.09693165969316597,
-             1.0056497175141244
-          ]
-       },
-       {
-          "rawName":"KING DEDEDE",
-          "name":"king_dedede",
-          "coordinates":[
-             0.9142259414225942,
-             0.8436911487758946
-          ]
-       },
-       {
-          "rawName":"OLIMAR",
-          "name":"olimar",
-          "coordinates":[
-             0.32252440725244075,
-             1.0828625235404896
-          ]
-       },
-       {
-          "rawName":"LUCARIO",
-          "name":"lucario",
-          "coordinates":[
-             0.301952580195258,
-             0.6572504708097928
-          ]
-       },
-       {
-          "rawName":"R.O.B.",
-          "name":"rob",
-          "coordinates":[
-             0.25278940027894004,
-             0.4199623352165725
-          ]
-       },
-       {
-          "rawName":"TOON LINK",
-          "name":"toon_link",
-          "coordinates":[
-             0.14539748953974896,
-             0.3992467043314501
-          ]
-       },
-       {
-          "rawName":"WOLF",
-          "name":"wolf",
-          "coordinates":[
-             0.5289400278940027,
-             0.6930320150659134
-          ]
-       },
-       {
-          "rawName":"VILLAGER",
-          "name":"villager",
-          "coordinates":[
-             0.8940027894002789,
-             1.0301318267419963
-          ]
-       },
-       {
-          "rawName":"MEGA MAN",
-          "name":"mega_man",
-          "coordinates":[
-             0.5920502092050209,
-             0.967984934086629
-          ]
-       },
-       {
-          "rawName":"Wii Fit TRAINER",
-          "name":"wii_fit_trainer",
-          "coordinates":[
-             0.06380753138075314,
-             0.751412429378531
-          ]
-       },
-       {
-          "rawName":"ROSALINA &amp; LUMA",
-          "name":"rosalina_and_luma",
-          "coordinates":[
-             0.5652022315202232,
-             0.632768361581921
-          ]
-       },
-       {
-          "rawName":"LITTLE MAC",
-          "name":"little_mac",
-          "coordinates":[
-             0.3423988842398884,
-             0.8926553672316384
-          ]
-       },
-       {
-          "rawName":"GRENINJA",
-          "name":"greninja",
-          "coordinates":[
-             0.18305439330543932,
-             1.0169491525423728
-          ]
-       },
-       {
-          "rawName":"Mii FIGHTER",
-          "name":"mii_fighter",
-          "coordinates":[
-             0.16457461645746166,
-             0.5894538606403014
-          ]
-       },
-       {
-          "rawName":"PALUTENA",
-          "name":"palutena",
-          "coordinates":[
-             0.8594839609483961,
-             0.4180790960451977
-          ]
-       },
-       {
-          "rawName":"PAC-MAN",
-          "name":"pac_man",
-          "coordinates":[
-             0.5683403068340307,
-             0.4048964218455744
-          ]
-       },
-       {
-          "rawName":"ROBIN",
-          "name":"robin",
-          "coordinates":[
-             0.9539748953974896,
-             0.9849340866290018
-          ]
-       },
-       {
-          "rawName":"SHULK",
-          "name":"shulk",
-          "coordinates":[
-             0.6875871687587168,
-             0.4463276836158192
-          ]
-       },
-       {
-          "rawName":"BOWSER JR.",
-          "name":"bowser_jr",
-          "coordinates":[
-             0.7168758716875872,
-             0.3728813559322034
-          ]
-       },
-       {
-          "rawName":"DUCK HUNT",
-          "name":"duck_hunt",
-          "coordinates":[
-             0.9790794979079498,
-             0.4670433145009416
-          ]
-       },
-       {
-          "rawName":"RYU",
-          "name":"ryu",
-          "coordinates":[
-             0.8800557880055788,
-             0.4613935969868173
-          ]
-       },
-       {
-          "rawName":"KEN",
-          "name":"ken",
-          "coordinates":[
-             0.22733612273361228,
-             0.559322033898305
-          ]
-       },
-       {
-          "rawName":"CLOUD",
-          "name":"cloud",
-          "coordinates":[
-             0.4100418410041841,
-             0.9227871939736346
-          ]
-       },
-       {
-          "rawName":"CORRIN",
-          "name":"corrin",
-          "coordinates":[
-             0.030683403068340307,
-             0.768361581920904
-          ]
-       },
-       {
-          "rawName":"BAYONETTA",
-          "name":"bayonetta",
-          "coordinates":[
-             0.17294281729428174,
-             0.3860640301318267
-          ]
-       },
-       {
-          "rawName":"INKLING",
-          "name":"inkling",
-          "coordinates":[
-             0.5341701534170153,
-             0.9397363465160076
-          ]
-       },
-       {
-          "rawName":"RIDLEY",
-          "name":"ridley",
-          "coordinates":[
-             0.9550209205020921,
-             0.391713747645951
-          ]
-       },
-       {
-          "rawName":"SIMON",
-          "name":"simon",
-          "coordinates":[
-             0.09518828451882845,
-             0.7269303201506592
-          ]
-       },
-       {
-          "rawName":"RICHTER",
-          "name":"richter",
-          "coordinates":[
-             0.8873779637377964,
-             0.6836158192090396
-          ]
-       },
-       {
-          "rawName":"KING K. ROOL",
-          "name":"king_k_rool",
-          "coordinates":[
-             0.2883542538354254,
-             0.4086629001883239
-          ]
-       },
-       {
-          "rawName":"ISABELLE",
-          "name":"shizue",
-          "coordinates":[
-             0.3577405857740586,
-             0.943502824858757
-          ]
-       },
-       {
-          "rawName":"INCINEROAR",
-          "name":"gaogaen",
-          "coordinates":[
-             0.8403068340306834,
-             0.7740112994350282
-          ]
-       }
-    ]
+   "characters": [
+     {
+       "name": "packun_flower",
+       "rawName": "PIRANHA PLANT",
+       "x": 0.27362637362637365,
+       "y": 0.5335968379446641
+     },
+     {
+       "name": "joker",
+       "rawName": "JOKER",
+       "x": 0.6717948717948717,
+       "y": 0.3339920948616601
+     },
+     {
+       "name": "dq_hero",
+       "rawName": "HERO",
+       "x": 0.6322344322344322,
+       "y": 0.575098814229249
+     },
+     {
+       "name": "banjo_and_kazooie",
+       "rawName": "BANJO &amp; KAZOOIE",
+       "x": 0.0684981684981685,
+       "y": 0.04940711462450593
+     },
+     {
+       "name": "terry",
+       "rawName": "TERRY",
+       "x": 0.6978021978021978,
+       "y": 0.3557312252964427
+     },
+     {
+       "name": "byleth",
+       "rawName": "BYLETH",
+       "x": 0.1978021978021978,
+       "y": 0.38537549407114624
+     },
+     {
+       "name": "minmin",
+       "rawName": "MIN MIN",
+       "x": 0.6959706959706959,
+       "y": 0.5632411067193676
+     },
+     {
+       "name": "steve",
+       "rawName": "STEVE / ALEX",
+       "x": 0.1443223443223443,
+       "y": 0.6976284584980237
+     },
+     {
+       "name": "sephiroth",
+       "rawName": "SEPHIROTH",
+       "x": 0.45274725274725275,
+       "y": 0.3616600790513834
+     },
+     {
+       "name": "homura",
+       "rawName": "PYRA / MYTHRA",
+       "x": 0.7556776556776557,
+       "y": 0.08300395256916997
+     },
+     {
+       "name": "kazuya",
+       "rawName": "KAZUYA",
+       "x": 0.16593406593406593,
+       "y": 0.34189723320158105
+     },
+     {
+       "name": "sora",
+       "rawName": "SORA",
+       "x": 0.6333333333333333,
+       "y": 0.039525691699604744
+     },
+     {
+       "name": "mario",
+       "rawName": "MARIO",
+       "x": 0.8245421245421245,
+       "y": 0.07114624505928854
+     },
+     {
+       "name": "donkey_kong",
+       "rawName": "DONKEY KONG",
+       "x": 0.5344322344322344,
+       "y": 0.1007905138339921
+     },
+     {
+       "name": "link",
+       "rawName": "LINK",
+       "x": 0.11501831501831501,
+       "y": 0.09090909090909091
+     },
+     {
+       "name": "samus",
+       "rawName": "SAMUS",
+       "x": 0.45714285714285713,
+       "y": 0.1225296442687747
+     },
+     {
+       "name": "dark_samus",
+       "rawName": "DARK SAMUS",
+       "x": 0.5985347985347985,
+       "y": 0.07114624505928854
+     },
+     {
+       "name": "yoshi",
+       "rawName": "YOSHI",
+       "x": 0.38754578754578756,
+       "y": 0.2707509881422925
+     },
+     {
+       "name": "kirby",
+       "rawName": "KIRBY",
+       "x": 0.5003663003663004,
+       "y": 0.1956521739130435
+     },
+     {
+       "name": "fox",
+       "rawName": "FOX",
+       "x": 0.48864468864468863,
+       "y": 0.3458498023715415
+     },
+     {
+       "name": "pikachu",
+       "rawName": "PIKACHU",
+       "x": 0.4868131868131868,
+       "y": 0.66600790513834
+     },
+     {
+       "name": "luigi",
+       "rawName": "LUIGI",
+       "x": 0.23003663003663002,
+       "y": 0.015810276679841896
+     },
+     {
+       "name": "ness",
+       "rawName": "NESS",
+       "x": 0.7794871794871795,
+       "y": 0.26679841897233203
+     },
+     {
+       "name": "captain_falcon",
+       "rawName": "CAPTAIN FALCON",
+       "x": 0.9556776556776557,
+       "y": 0.26679841897233203
+     },
+     {
+       "name": "jigglypuff",
+       "rawName": "JIGGLYPUFF",
+       "x": 0.8135531135531135,
+       "y": 0.6798418972332015
+     },
+     {
+       "name": "peach",
+       "rawName": "PEACH",
+       "x": 0.7879120879120879,
+       "y": 0.04743083003952569
+     },
+     {
+       "name": "daisy",
+       "rawName": "DAISY",
+       "x": 0.14175824175824175,
+       "y": 0.5276679841897233
+     },
+     {
+       "name": "bowser",
+       "rawName": "BOWSER",
+       "x": 0.3556776556776557,
+       "y": 0.2845849802371542
+     },
+     {
+       "name": "ice_climbers",
+       "rawName": "ICE CLIMBERS",
+       "x": 0.035897435897435895,
+       "y": 0.10869565217391304
+     },
+     {
+       "name": "sheik",
+       "rawName": "SHEIK",
+       "x": 0.3963369963369963,
+       "y": 0.0691699604743083
+     },
+     {
+       "name": "zelda",
+       "rawName": "ZELDA",
+       "x": 0.4043956043956044,
+       "y": 0.4644268774703557
+     },
+     {
+       "name": "dr_mario",
+       "rawName": "DR. MARIO",
+       "x": 0.04212454212454213,
+       "y": 0.5830039525691699
+     },
+     {
+       "name": "pichu",
+       "rawName": "PICHU",
+       "x": 0.4655677655677656,
+       "y": 0.5138339920948617
+     },
+     {
+       "name": "falco",
+       "rawName": "FALCO",
+       "x": 0.36043956043956044,
+       "y": 0.05928853754940711
+     },
+     {
+       "name": "marth",
+       "rawName": "MARTH",
+       "x": 0.621978021978022,
+       "y": 0.4367588932806324
+     },
+     {
+       "name": "lucina",
+       "rawName": "LUCINA",
+       "x": 0.9307692307692308,
+       "y": 0.22727272727272727
+     },
+     {
+       "name": "young_link",
+       "rawName": "YOUNG LINK",
+       "x": 0.7362637362637363,
+       "y": 0.35375494071146246
+     },
+     {
+       "name": "ganondorf",
+       "rawName": "GANONDORF",
+       "x": 0.6663003663003663,
+       "y": 0.04940711462450593
+     },
+     {
+       "name": "mewtwo",
+       "rawName": "MEWTWO",
+       "x": 0.2549450549450549,
+       "y": 0.15217391304347827
+     },
+     {
+       "name": "roy",
+       "rawName": "ROY",
+       "x": 0.5813186813186814,
+       "y": 0.4150197628458498
+     },
+     {
+       "name": "chrom",
+       "rawName": "CHROM",
+       "x": 0.9743589743589743,
+       "y": 0.39723320158102765
+     },
+     {
+       "name": "mr_game_and_watch",
+       "rawName": "MR. GAME &amp; WATCH",
+       "x": 0.01684981684981685,
+       "y": 0.5869565217391305
+     },
+     {
+       "name": "meta_knight",
+       "rawName": "META KNIGHT",
+       "x": 0.924908424908425,
+       "y": 0.10276679841897234
+     },
+     {
+       "name": "pit",
+       "rawName": "PIT",
+       "x": 0.4901098901098901,
+       "y": 0.05928853754940711
+     },
+     {
+       "name": "dark_pit",
+       "rawName": "DARK PIT",
+       "x": 0.319047619047619,
+       "y": 0.05731225296442688
+     },
+     {
+       "name": "zero_suit_samus",
+       "rawName": "ZERO SUIT SAMUS",
+       "x": 0.6212454212454213,
+       "y": 0.2608695652173913
+     },
+     {
+       "name": "wario",
+       "rawName": "WARIO",
+       "x": 0.8542124542124542,
+       "y": 0.5849802371541502
+     },
+     {
+       "name": "snake",
+       "rawName": "SNAKE",
+       "x": 0.2271062271062271,
+       "y": 0.5454545454545454
+     },
+     {
+       "name": "ike",
+       "rawName": "IKE",
+       "x": 0.31868131868131866,
+       "y": 0.4209486166007905
+     },
+     {
+       "name": "pokemon_trainer",
+       "rawName": "POKÉMON TRAINER",
+       "x": 0.7483516483516484,
+       "y": 0.5474308300395256
+     },
+     {
+       "name": "diddy_kong",
+       "rawName": "DIDDY KONG",
+       "x": 0.4289377289377289,
+       "y": 0.04743083003952569
+     },
+     {
+       "name": "lucas",
+       "rawName": "LUCAS",
+       "x": 0.25970695970695973,
+       "y": 0.308300395256917
+     },
+     {
+       "name": "sonic",
+       "rawName": "SONIC",
+       "x": 0.10036630036630037,
+       "y": 0.6205533596837944
+     },
+     {
+       "name": "king_dedede",
+       "rawName": "KING DEDEDE",
+       "x": 0.9146520146520146,
+       "y": 0.4762845849802372
+     },
+     {
+       "name": "olimar",
+       "rawName": "OLIMAR",
+       "x": 0.32344322344322346,
+       "y": 0.7154150197628458
+     },
+     {
+       "name": "lucario",
+       "rawName": "LUCARIO",
+       "x": 0.3047619047619048,
+       "y": 0.29446640316205536
+     },
+     {
+       "name": "rob",
+       "rawName": "R.O.B.",
+       "x": 0.2549450549450549,
+       "y": 0.0691699604743083
+     },
+     {
+       "name": "toon_link",
+       "rawName": "TOON LINK",
+       "x": 0.1468864468864469,
+       "y": 0.019762845849802372
+     },
+     {
+       "name": "wolf",
+       "rawName": "WOLF",
+       "x": 0.5293040293040293,
+       "y": 0.33794466403162055
+     },
+     {
+       "name": "villager",
+       "rawName": "VILLAGER",
+       "x": 0.8945054945054945,
+       "y": 0.6778656126482213
+     },
+     {
+       "name": "mega_man",
+       "rawName": "MEGA MAN",
+       "x": 0.5956043956043956,
+       "y": 0.6126482213438735
+     },
+     {
+       "name": "wii_fit_trainer",
+       "rawName": "Wii Fit TRAINER",
+       "x": 0.0641025641025641,
+       "y": 0.3616600790513834
+     },
+     {
+       "name": "rosalina_and_luma",
+       "rawName": "ROSALINA &amp; LUMA",
+       "x": 0.5663003663003663,
+       "y": 0.2549407114624506
+     },
+     {
+       "name": "little_mac",
+       "rawName": "LITTLE MAC",
+       "x": 0.3435897435897436,
+       "y": 0.5217391304347826
+     },
+     {
+       "name": "greninja",
+       "rawName": "GRENINJA",
+       "x": 0.1794871794871795,
+       "y": 0.66600790513834
+     },
+     {
+       "name": "mii_fighter",
+       "rawName": "Mii FIGHTER",
+       "x": 0.16556776556776556,
+       "y": 0.22529644268774704
+     },
+     {
+       "name": "palutena",
+       "rawName": "PALUTENA",
+       "x": 0.8593406593406593,
+       "y": 0.05533596837944664
+     },
+     {
+       "name": "pac_man",
+       "rawName": "PAC-MAN",
+       "x": 0.5688644688644688,
+       "y": 0.045454545454545456
+     },
+     {
+       "name": "robin",
+       "rawName": "ROBIN",
+       "x": 0.9538461538461539,
+       "y": 0.6284584980237155
+     },
+     {
+       "name": "shulk",
+       "rawName": "SHULK",
+       "x": 0.6871794871794872,
+       "y": 0.09486166007905138
+     },
+     {
+       "name": "bowser_jr",
+       "rawName": "BOWSER JR.",
+       "x": 0.7168498168498169,
+       "y": 0.019762845849802372
+     },
+     {
+       "name": "duck_hunt",
+       "rawName": "DUCK HUNT",
+       "x": 0.9769230769230769,
+       "y": 0.14624505928853754
+     },
+     {
+       "name": "ryu",
+       "rawName": "RYU",
+       "x": 0.8787545787545787,
+       "y": 0.07509881422924901
+     },
+     {
+       "name": "ken",
+       "rawName": "KEN",
+       "x": 0.22783882783882783,
+       "y": 0.1956521739130435
+     },
+     {
+       "name": "cloud",
+       "rawName": "CLOUD",
+       "x": 0.41098901098901097,
+       "y": 0.5513833992094862
+     },
+     {
+       "name": "corrin",
+       "rawName": "CORRIN",
+       "x": 0.03076923076923077,
+       "y": 0.42292490118577075
+     },
+     {
+       "name": "bayonetta",
+       "rawName": "BAYONETTA",
+       "x": 0.16923076923076924,
+       "y": 0.03162055335968379
+     },
+     {
+       "name": "inkling",
+       "rawName": "INKLING",
+       "x": 0.5366300366300366,
+       "y": 0.5592885375494071
+     },
+     {
+       "name": "ridley",
+       "rawName": "RIDLEY",
+       "x": 0.954945054945055,
+       "y": 0.05138339920948617
+     },
+     {
+       "name": "simon",
+       "rawName": "SIMON",
+       "x": 0.09413919413919414,
+       "y": 0.3774703557312253
+     },
+     {
+       "name": "richter",
+       "rawName": "RICHTER",
+       "x": 0.8882783882783882,
+       "y": 0.33992094861660077
+     },
+     {
+       "name": "king_k_rool",
+       "rawName": "KING K. ROOL",
+       "x": 0.2875457875457875,
+       "y": 0.08300395256916997
+     },
+     {
+       "name": "shizue",
+       "rawName": "ISABELLE",
+       "x": 0.35824175824175825,
+       "y": 0.6185770750988142
+     },
+     {
+       "name": "gaogaen",
+       "rawName": "INCINEROAR",
+       "x": 0.8399267399267399,
+       "y": 0.43478260869565216
+     }
+   ]
  }
+ 
