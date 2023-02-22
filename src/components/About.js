@@ -1,3 +1,3 @@
 export default function About() {
-  return <div>The about page!</div>
+  return <div className="main-content-container">The about page!</div>
 }

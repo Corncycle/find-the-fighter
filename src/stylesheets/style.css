@@ -17,6 +17,24 @@ img {
     padding: 0;
 }
 
+input[type="text"] {
+    font-size: 1rem;
+    padding: 6px;
+    border: 1px solid #838383;
+    border-radius: 8px;;
+}
+
+input[type="text"]:focus, 
+input[type="text"]:focus-visible, 
+input[type="date"]:focus,
+input[type="date"]:focus-visible,
+select:focus,
+select:focus-visible {
+    border: 1px solid transparent;
+    outline: 1px solid rgb(109, 156, 255);
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.096);
+}
+
 html, body, #root {
     height: 100%;
 }
@@ -101,10 +119,16 @@ html, body, #root {
     font-weight: 300;
     text-decoration: none;
     color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
 }
 
 .topbar-option:hover {
     color: yellow;
+}
+
+.current-page {
+    background:rgb(255 255 255 / 20%);
 }
 
 .topbar-spacer {
@@ -135,6 +159,14 @@ html, body, #root {
     font-size: 1.5rem;
     line-height: 1.3;
     font-weight: bold;
+}
+
+.submit-score-form {
+    gap: 8px;
+}
+
+.submit-text {
+    width: 12rem;
 }
 
 .character-cards-container {
@@ -198,7 +230,18 @@ html, body, #root {
     cursor: pointer;
 }
 
+.incorrect-symbol {
+    pointer-events: none;
+    position: absolute;
+    width: calc((80vh - 5rem) / 6);
+    height: calc((80vh - 5rem) / 6);
+    transform: translate(-50%, -50%);
+    filter: invert(16%) sepia(94%) saturate(7497%) hue-rotate(4deg) brightness(98%) contrast(115%) drop-shadow(0 0 4px rgba(26, 0, 0, 0.452)) drop-shadow(0 0 4px rgba(26, 0, 0, 0.452));
+    animation: 2s ease-in forwards fade-out;
+}
+
 .prompt-container {
+    z-index: 2;
     position: absolute;
     pointer-events: none;
 }
@@ -268,5 +311,15 @@ html, body, #root {
 
     100% {
         border-color: var(--border-color-1);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1
+    }
+    
+    100% {
+        opacity: 0
     }
 }

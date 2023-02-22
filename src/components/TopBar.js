@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function TopBar() {
+export default function TopBar({ currentPage, setCurrentPage }) {
   const options = ["play", "scores", "about"]
 
   return (
@@ -11,7 +11,12 @@ export default function TopBar() {
           let newArr = prev.concat([
             <Link
               to={curr === "play" ? "" : curr}
-              className="topbar-option"
+              className={
+                "topbar-option" + (currentPage === curr ? " current-page" : "")
+              }
+              onClick={() => {
+                setCurrentPage(curr)
+              }}
               key={i}
             >
               {curr}

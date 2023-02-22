@@ -1,3 +1,3 @@
 export default function Scores() {
-  return <div>The scores page!</div>
+  return <div className="main-content-container flex">The scores page!</div>
 }

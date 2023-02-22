@@ -36,6 +36,7 @@ function gameStateReducer(state, action) {
       return {
         ...state,
         playing: false,
+        finishedGame: true,
       }
     }
     case "show_prompt": {
@@ -69,6 +70,7 @@ function gameStateReducer(state, action) {
 function App() {
   const [gameState, dispatch] = useReducer(gameStateReducer, {
     playing: false,
+    finishedGame: false,
     charsToFind: [],
     queuedCharsToFind: [],
     charsFound: [],
@@ -77,6 +79,7 @@ function App() {
 
   const [currImgs, setCurrImgs] = useState([])
   const [queuedImgs, setQueuedImgs] = useState([])
+  const [currentPage, setCurrentPage] = useState("play")
 
   // used for preloading individual character images for responsiveness
   function imgsByArr(arr) {
@@ -115,7 +118,7 @@ function App() {
       }}
     >
       <HashRouter>
-        <TopBar />
+        <TopBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route
             path="/"
@@ -136,6 +139,8 @@ function App() {
 
                     dispatch({ type: "start_game", nextCharacters: newChars })
                   }}
+                  finishedGame={gameState.finishedGame}
+                  time={3}
                 />
               )
             }

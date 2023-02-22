@@ -1,7 +1,9 @@
 import muralImg from "../images/mural-quarter.jpg"
+import xSvg from "../images/x.svg"
 import CharacterCard from "./CharacterCard"
 
 import { charData, charDataByName } from "../util"
+import { useState } from "react"
 
 const xTolerance = 0.025
 const yTolerance = 0.3
@@ -11,6 +13,8 @@ let promptY = 0
 let promptXPct = 0
 let promptYPct = 0
 let promptFlipped = false
+
+let symbolsCounter = 0
 
 function updatePromptLocation() {
   const promptNode = document.querySelector(".prompt-container")
@@ -41,6 +45,8 @@ function isValidGuess(character, xPct, yPct) {
 }
 
 export default function Game({ gameState, dispatch, imgLocs }) {
+  const [xSymbols, setXSymbols] = useState([])
+
   return (
     <div className="game-container flex-col">
       <div className="character-cards-container flex">
@@ -95,11 +101,22 @@ export default function Game({ gameState, dispatch, imgLocs }) {
                   key={i}
                   className="prompt-name"
                   onClick={(e) => {
-                    if (
-                      !gameState.charsFound.includes(name) &&
-                      isValidGuess(name, promptXPct, promptYPct)
-                    ) {
-                      dispatch({ type: "find_character", name: name })
+                    if (!gameState.charsFound.includes(name)) {
+                      if (isValidGuess(name, promptXPct, promptYPct)) {
+                        dispatch({ type: "find_character", name: name })
+                      } else {
+                        setXSymbols(
+                          xSymbols.concat([[promptX, promptY, symbolsCounter]])
+                        )
+                        symbolsCounter += 1
+                        setTimeout(() => {
+                          setXSymbols((oldSymbols) => {
+                            const copy = [...oldSymbols]
+                            copy.shift()
+                            return copy
+                          })
+                        }, 3000)
+                      }
                     }
                     dispatch({ type: "hide_prompt" })
                   }}
@@ -111,6 +128,17 @@ export default function Game({ gameState, dispatch, imgLocs }) {
             })}
           </ul>
         </div>
+        {xSymbols.map((coords, i) => {
+          return (
+            <img
+              key={coords[2]}
+              alt="X"
+              src={xSvg}
+              style={{ left: coords[0] + "px", top: coords[1] + "px" }}
+              className="incorrect-symbol"
+            />
+          )
+        })}
       </div>
     </div>
   )
