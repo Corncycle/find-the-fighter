@@ -178,11 +178,11 @@ html, body, #root {
     position: relative;
     border: 1px solid black;
     border-radius: 8px;
-    height: 10vh;
 }
 
-.character-card-container img {
+.character-card-image {
     border-radius: 8px;
+    height: 10vh;
 }
 
 .character-card-container.found img {

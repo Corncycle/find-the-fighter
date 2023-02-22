@@ -24,6 +24,8 @@ function gameStateReducer(state, action) {
         queuedCharsToFind: action.nextCharacters,
         charsFound: [],
         promptShown: false,
+        startTime: new Date(),
+        endTime: null,
       }
     }
     case "enqueue_characters": {
@@ -37,6 +39,7 @@ function gameStateReducer(state, action) {
         ...state,
         playing: false,
         finishedGame: true,
+        endTime: new Date(),
       }
     }
     case "show_prompt": {
@@ -75,6 +78,8 @@ function App() {
     queuedCharsToFind: [],
     charsFound: [],
     promptShown: false,
+    startTime: null,
+    endTime: null,
   })
 
   const [currImgs, setCurrImgs] = useState([])
@@ -140,7 +145,11 @@ function App() {
                     dispatch({ type: "start_game", nextCharacters: newChars })
                   }}
                   finishedGame={gameState.finishedGame}
-                  time={3}
+                  time={
+                    Math.round(
+                      (gameState.endTime - gameState.startTime) / 100
+                    ) / 10
+                  }
                 />
               )
             }
