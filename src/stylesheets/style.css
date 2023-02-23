@@ -10,6 +10,15 @@
     --hover-border: 5px;
     --border-color-1: yellow;
     --border-color-2: darkorange;
+
+    --high-score-color-1: #f1f5f9;
+    --high-score-color-2: #cbd5e1;
+    --high-score-color-3: #e2e8f0;
+    --high-score-color-4: #94a3b8;
+
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --bronze: #CD7F32;
 }
 
 img {
@@ -95,6 +104,10 @@ html, body, #root {
     box-shadow: 0 3px 10px 2px rgb(0 0 0 / 20%);
 }
 
+.button-set {
+    gap: 8px;
+}
+
 .main-container {
     overflow: hidden;
     height: 100%;
@@ -111,6 +124,7 @@ html, body, #root {
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    box-shadow: 0 3px 10px 2px rgb(0 0 0 / 20%);
 }
 
 .topbar-container::-webkit-scrollbar {
@@ -166,6 +180,7 @@ html, body, #root {
 
 .main-content-container {
     padding-top: 30px;
+    padding-bottom: 10px;
     display: flex;
 }
 
@@ -199,6 +214,7 @@ html, body, #root {
     position: relative;
     border: 1px solid black;
     border-radius: 8px;
+    box-shadow: 0 3px 10px 2px rgb(0 0 0 / 20%);
 }
 
 .character-card-image {
@@ -242,6 +258,7 @@ html, body, #root {
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
+    box-shadow: 0 -3px 10px 2px rgb(0 0 0 / 20%);
     /*background-image: url("../images/mural-quarter.jpg");
     background-size: cover;*/
 }
@@ -311,38 +328,51 @@ html, body, #root {
     color: black;
 }
 
+.loading-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.loading-text::after {
+    content: "";
+    animation: 1s linear infinite loading-ellipsis;
+}
+
 .scores-container {
     align-items: center;
 }
 
 .scores-title {
     margin-top: 30px;
+    margin-bottom: 8px;
 }
 
 .high-scores-container {
-    gap: 4px;
+    gap: 6px;
+    min-width: 35%;
 }
 
 .high-score-row {
     padding: 0;
-    gap: 4px;
+    gap: 6px;
+    font-weight: bold;
 }
 
 .high-score-name, .high-score-time {
-    padding: 4px;
+    padding: 10px;
     overflow: hidden;
 }
 
 .high-score-name {
     flex: 1;
-    background: tomato;
     min-width: 10rem;
 }
 
 .high-score-time {
-    width: 4rem;
-    background: turquoise;
-    text-align: right;
+    width: 5rem;
+    text-align: center;
 }
 
 .high-score-row:first-child .high-score-name {
@@ -361,6 +391,60 @@ html, body, #root {
     border-bottom-right-radius: 8px;
 }
 
+.high-score-row:nth-child(2n) .high-score-name {
+    background: var(--high-score-color-1);
+}
+
+.high-score-row:nth-child(2n+1) .high-score-name {
+    background: var(--high-score-color-2);
+}
+
+.high-score-row:nth-child(2n) .high-score-time {
+    background: var(--high-score-color-3);
+}
+
+.high-score-row:nth-child(2n+1) .high-score-time {
+    background: var(--high-score-color-4);
+}
+
+.high-score-row:first-child .high-score-row-title {
+    background-color: black;
+    color: white;
+}
+
+/*.high-score-row:nth-child(2) .high-score-time {
+    outline: 3px solid var(--gold);
+}
+
+.high-score-row:nth-child(3) .high-score-time {
+    outline: 3px solid var(--silver);
+}
+
+.high-score-row:nth-child(4) .high-score-time {
+    outline: 3px solid var(--bronze);
+}*/
+
+@keyframes loading-ellipsis {
+    0% {
+        content: ""
+    }
+
+    25% {
+        content: "."
+    }
+
+    50% {
+        content: ".."
+    }
+
+    75% {
+        content: "..."
+    }
+
+    100% {
+        content: "..."
+    }
+}
 
 @keyframes gradient {
     0% {

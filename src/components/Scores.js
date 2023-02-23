@@ -16,6 +16,10 @@ export default function Scores() {
         <div className="instructions-text scores-title">Top scores</div>
         {highScores.length > 0 ? (
           <div className="high-scores-container flex-col">
+            <div className="high-score-row flex">
+              <div className="high-score-name high-score-row-title">NAME</div>
+              <div className="high-score-time high-score-row-title">TIME</div>
+            </div>
             {highScores.map((hs, i) => {
               return (
                 <div key={i} className="high-score-row flex">
@@ -26,7 +30,7 @@ export default function Scores() {
             })}
           </div>
         ) : (
-          <div>Loading high scores...</div>
+          <div className="loading-text">Loading high scores</div>
         )}
       </div>
     </div>

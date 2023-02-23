@@ -1,6 +1,7 @@
 import SmashButton from "./SmashButton"
 
 import { submitScore } from "../firebase"
+import { Link } from "react-router-dom"
 
 export default function Instructions({
   startGameFunction,
@@ -51,7 +52,12 @@ export default function Instructions({
             </>
           )}
           <div style={{ height: "50px" }} />
-          <SmashButton text="Play again" onClick={startGameFunction} />
+          <div className="flex button-set">
+            <SmashButton text="Play again" onClick={startGameFunction} />
+            <Link to="/scores">
+              <SmashButton text="View Scores" />
+            </Link>
+          </div>
         </div>
       )}
     </div>
