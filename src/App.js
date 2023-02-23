@@ -5,7 +5,7 @@ import TopBar from "./components/TopBar"
 import muralImg from "./images/mural-quarter.jpg"
 
 import { useReducer, useEffect, useState } from "react"
-import { HashRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import { sampleSize } from "lodash"
 
 import { charNames } from "./util"
@@ -26,6 +26,7 @@ function gameStateReducer(state, action) {
         promptShown: false,
         startTime: new Date(),
         endTime: null,
+        showSubmitForm: true,
       }
     }
     case "enqueue_characters": {
@@ -54,6 +55,18 @@ function gameStateReducer(state, action) {
         promptShown: false,
       }
     }
+    case "show_submit_form": {
+      return {
+        ...state,
+        showSubmitForm: true,
+      }
+    }
+    case "hide_submit_form": {
+      return {
+        ...state,
+        showSubmitForm: false,
+      }
+    }
     case "find_character": {
       if (state.charsFound.includes(action.name)) {
         return { ...state }
@@ -80,11 +93,41 @@ function App() {
     promptShown: false,
     startTime: null,
     endTime: null,
+    showSubmitForm: true,
   })
+
+  const [currName, setCurrName] = useState("")
+
+  const location = useLocation()
 
   const [currImgs, setCurrImgs] = useState([])
   const [queuedImgs, setQueuedImgs] = useState([])
   const [currentPage, setCurrentPage] = useState("play")
+
+  useEffect(() => {
+    setCurrentPage(location)
+    switch (location.pathname) {
+      case undefined: {
+        setCurrentPage("play")
+        return
+      }
+      case "/": {
+        setCurrentPage("play")
+        return
+      }
+      case "/scores": {
+        setCurrentPage("scores")
+        return
+      }
+      case "/about": {
+        setCurrentPage("about")
+        return
+      }
+      default: {
+        throw new Error(`Unhandled route ${location.path}`)
+      }
+    }
+  }, [location])
 
   // used for preloading individual character images for responsiveness
   function imgsByArr(arr) {
@@ -122,42 +165,43 @@ function App() {
         dispatch({ type: "hide_prompt" })
       }}
     >
-      <HashRouter>
-        <TopBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              gameState.playing ? (
-                <Game
-                  gameState={gameState}
-                  dispatch={dispatch}
-                  imgLocs={currImgs}
-                />
-              ) : (
-                <Instructions
-                  startGameFunction={() => {
-                    const newChars = sampleSize(charNames, 3)
-                    const safeQueued = [...queuedImgs]
-                    setCurrImgs(safeQueued)
-                    setQueuedImgs(imgsByArr(newChars))
+      <TopBar currentPage={currentPage} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            gameState.playing ? (
+              <Game
+                gameState={gameState}
+                dispatch={dispatch}
+                imgLocs={currImgs}
+              />
+            ) : (
+              <Instructions
+                startGameFunction={() => {
+                  const newChars = sampleSize(charNames, 3)
+                  const safeQueued = [...queuedImgs]
+                  setCurrImgs(safeQueued)
+                  setQueuedImgs(imgsByArr(newChars))
 
-                    dispatch({ type: "start_game", nextCharacters: newChars })
-                  }}
-                  finishedGame={gameState.finishedGame}
-                  time={
-                    Math.round(
-                      (gameState.endTime - gameState.startTime) / 100
-                    ) / 10
-                  }
-                />
-              )
-            }
-          />
-          <Route path="/scores" element={<Scores />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </HashRouter>
+                  dispatch({ type: "start_game", nextCharacters: newChars })
+                }}
+                finishedGame={gameState.finishedGame}
+                time={
+                  Math.round((gameState.endTime - gameState.startTime) / 100) /
+                  10
+                }
+                showSubmitForm={gameState.showSubmitForm}
+                dispatch={dispatch}
+                currName={currName}
+                setCurrName={setCurrName}
+              />
+            )
+          }
+        />
+        <Route path="/scores" element={<Scores />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   )
 }

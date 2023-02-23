@@ -14,9 +14,6 @@ export default function TopBar({ currentPage, setCurrentPage }) {
               className={
                 "topbar-option" + (currentPage === curr ? " current-page" : "")
               }
-              onClick={() => {
-                setCurrentPage(curr)
-              }}
               key={i}
             >
               {curr}

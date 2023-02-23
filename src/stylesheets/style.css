@@ -5,7 +5,7 @@
 }
 
 :root {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     --caption-padding: 6px;
     --hover-border: 5px;
     --border-color-1: yellow;
@@ -57,6 +57,14 @@ html, body, #root {
     align-items: center;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
 .smash-button-border {
     padding: var(--hover-border);
     cursor: pointer;
@@ -93,12 +101,20 @@ html, body, #root {
 }
 
 .topbar-container {
+    flex-shrink: 0;
     justify-content: space-between;
     background: black;
     color: white;
     padding: 18px;
     white-space: nowrap;
     gap: 1rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.topbar-container::-webkit-scrollbar {
+    display: none;
 }
 
 .topbar-title {
@@ -137,6 +153,11 @@ html, body, #root {
     font-size: 2rem;
 }
 
+.game-container, .main-content-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .game-container {
     flex: 1;
     align-items: center;
@@ -144,8 +165,8 @@ html, body, #root {
 }
 
 .main-content-container {
+    padding-top: 30px;
     display: flex;
-    justify-content: center;
 }
 
 .instructions-container {
@@ -289,6 +310,57 @@ html, body, #root {
     background: rgb(255 255 255 / 60%);
     color: black;
 }
+
+.scores-container {
+    align-items: center;
+}
+
+.scores-title {
+    margin-top: 30px;
+}
+
+.high-scores-container {
+    gap: 4px;
+}
+
+.high-score-row {
+    padding: 0;
+    gap: 4px;
+}
+
+.high-score-name, .high-score-time {
+    padding: 4px;
+    overflow: hidden;
+}
+
+.high-score-name {
+    flex: 1;
+    background: tomato;
+    min-width: 10rem;
+}
+
+.high-score-time {
+    width: 4rem;
+    background: turquoise;
+    text-align: right;
+}
+
+.high-score-row:first-child .high-score-name {
+    border-top-left-radius: 8px;
+}
+
+.high-score-row:first-child .high-score-time {
+    border-top-right-radius: 8px;
+}
+
+.high-score-row:last-child .high-score-name {
+    border-bottom-left-radius: 8px;
+}
+
+.high-score-row:last-child .high-score-time {
+    border-bottom-right-radius: 8px;
+}
+
 
 @keyframes gradient {
     0% {

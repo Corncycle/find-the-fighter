@@ -1,42 +1,56 @@
 import SmashButton from "./SmashButton"
 
+import { submitScore } from "../firebase"
+
 export default function Instructions({
   startGameFunction,
   finishedGame,
   time,
+  showSubmitForm,
+  dispatch,
+  currName,
+  setCurrName,
 }) {
   return (
-    <div className="main-content-container flex">
+    <div className="main-content-container flex justify-center">
       {!finishedGame ? (
         <div className="instructions-container flex-col center">
           <span className="instructions-text">
-            Click the three randomly chosen fighters in the Smash Bros. Ultimate
-            mural as fast as possible!
+            Find the three randomly chosen fighters in the Smash Bros. Ultimate
+            mural as quickly as possible!
           </span>
           <SmashButton text="Start Game" onClick={startGameFunction} />
         </div>
       ) : (
         <div className="instructions-container flex-col center">
-          <div style={{ height: "30px" }} />
           <span className="instructions-text">
             You found all of the characters in {time} seconds!
           </span>
-          <span className="instructions-text">Submit your score?</span>
-          <form
-            className="submit-score-form flex center"
-            onSubmit={(e) => {
-              e.preventDefault()
-            }}
-          >
-            <input
-              type="text"
-              className="submit-text"
-              placeholder="Your Name"
-            />
-            <SmashButton text="Submit" />
-          </form>
-          <div style={{ height: "30px" }} />
-          <span className="instructions-text">Or play again!</span>
+          {showSubmitForm && (
+            <>
+              <span className="instructions-text">Submit your score?</span>
+              <form
+                className="submit-score-form flex center"
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  submitScore(currName, time)
+                  dispatch({ type: "hide_submit_form" })
+                }}
+              >
+                <input
+                  type="text"
+                  className="submit-text"
+                  placeholder="Your Name"
+                  value={currName}
+                  onInput={(e) => {
+                    setCurrName(e.target.value)
+                  }}
+                />
+                <SmashButton text="Submit" />
+              </form>
+            </>
+          )}
+          <div style={{ height: "50px" }} />
           <SmashButton text="Play again" onClick={startGameFunction} />
         </div>
       )}

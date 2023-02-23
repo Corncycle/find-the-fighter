@@ -1,509 +1,340 @@
 {
-   "characters": [
+  "characters":[
      {
-       "name": "packun_flower",
-       "rawName": "PIRANHA PLANT",
-       "x": 0.27362637362637365,
-       "y": 0.5335968379446641
+        "rawName":"PIRANHA PLANT",
+        "name":"packun_flower"
      },
      {
-       "name": "joker",
-       "rawName": "JOKER",
-       "x": 0.6717948717948717,
-       "y": 0.3339920948616601
+        "rawName":"JOKER",
+        "name":"joker"
      },
      {
-       "name": "dq_hero",
-       "rawName": "HERO",
-       "x": 0.6322344322344322,
-       "y": 0.575098814229249
+        "rawName":"HERO",
+        "name":"dq_hero"
      },
      {
-       "name": "banjo_and_kazooie",
-       "rawName": "BANJO &amp; KAZOOIE",
-       "x": 0.0684981684981685,
-       "y": 0.04940711462450593
+        "rawName":"BANJO &amp; KAZOOIE",
+        "name":"banjo_and_kazooie"
      },
      {
-       "name": "terry",
-       "rawName": "TERRY",
-       "x": 0.6978021978021978,
-       "y": 0.3557312252964427
+        "rawName":"TERRY",
+        "name":"terry"
      },
      {
-       "name": "byleth",
-       "rawName": "BYLETH",
-       "x": 0.1978021978021978,
-       "y": 0.38537549407114624
+        "rawName":"BYLETH",
+        "name":"byleth"
      },
      {
-       "name": "minmin",
-       "rawName": "MIN MIN",
-       "x": 0.6959706959706959,
-       "y": 0.5632411067193676
+        "rawName":"MIN MIN",
+        "name":"minmin"
      },
      {
-       "name": "steve",
-       "rawName": "STEVE / ALEX",
-       "x": 0.1443223443223443,
-       "y": 0.6976284584980237
+        "rawName":"STEVE / ALEX",
+        "name":"steve"
      },
      {
-       "name": "sephiroth",
-       "rawName": "SEPHIROTH",
-       "x": 0.45274725274725275,
-       "y": 0.3616600790513834
+        "rawName":"SEPHIROTH",
+        "name":"sephiroth"
      },
      {
-       "name": "homura",
-       "rawName": "PYRA / MYTHRA",
-       "x": 0.7556776556776557,
-       "y": 0.08300395256916997
+        "rawName":"PYRA / MYTHRA",
+        "name":"homura"
      },
      {
-       "name": "kazuya",
-       "rawName": "KAZUYA",
-       "x": 0.16593406593406593,
-       "y": 0.34189723320158105
+        "rawName":"KAZUYA",
+        "name":"kazuya"
      },
      {
-       "name": "sora",
-       "rawName": "SORA",
-       "x": 0.6333333333333333,
-       "y": 0.039525691699604744
+        "rawName":"SORA",
+        "name":"sora"
      },
      {
-       "name": "mario",
-       "rawName": "MARIO",
-       "x": 0.8245421245421245,
-       "y": 0.07114624505928854
+        "rawName":"MARIO",
+        "name":"mario"
      },
      {
-       "name": "donkey_kong",
-       "rawName": "DONKEY KONG",
-       "x": 0.5344322344322344,
-       "y": 0.1007905138339921
+        "rawName":"DONKEY KONG",
+        "name":"donkey_kong"
      },
      {
-       "name": "link",
-       "rawName": "LINK",
-       "x": 0.11501831501831501,
-       "y": 0.09090909090909091
+        "rawName":"LINK",
+        "name":"link"
      },
      {
-       "name": "samus",
-       "rawName": "SAMUS",
-       "x": 0.45714285714285713,
-       "y": 0.1225296442687747
+        "rawName":"SAMUS",
+        "name":"samus"
      },
      {
-       "name": "dark_samus",
-       "rawName": "DARK SAMUS",
-       "x": 0.5985347985347985,
-       "y": 0.07114624505928854
+        "rawName":"DARK SAMUS",
+        "name":"dark_samus"
      },
      {
-       "name": "yoshi",
-       "rawName": "YOSHI",
-       "x": 0.38754578754578756,
-       "y": 0.2707509881422925
+        "rawName":"YOSHI",
+        "name":"yoshi"
      },
      {
-       "name": "kirby",
-       "rawName": "KIRBY",
-       "x": 0.5003663003663004,
-       "y": 0.1956521739130435
+        "rawName":"KIRBY",
+        "name":"kirby"
      },
      {
-       "name": "fox",
-       "rawName": "FOX",
-       "x": 0.48864468864468863,
-       "y": 0.3458498023715415
+        "rawName":"FOX",
+        "name":"fox"
      },
      {
-       "name": "pikachu",
-       "rawName": "PIKACHU",
-       "x": 0.4868131868131868,
-       "y": 0.66600790513834
+        "rawName":"PIKACHU",
+        "name":"pikachu"
      },
      {
-       "name": "luigi",
-       "rawName": "LUIGI",
-       "x": 0.23003663003663002,
-       "y": 0.015810276679841896
+        "rawName":"LUIGI",
+        "name":"luigi"
      },
      {
-       "name": "ness",
-       "rawName": "NESS",
-       "x": 0.7794871794871795,
-       "y": 0.26679841897233203
+        "rawName":"NESS",
+        "name":"ness"
      },
      {
-       "name": "captain_falcon",
-       "rawName": "CAPTAIN FALCON",
-       "x": 0.9556776556776557,
-       "y": 0.26679841897233203
+        "rawName":"CAPTAIN FALCON",
+        "name":"captain_falcon"
      },
      {
-       "name": "jigglypuff",
-       "rawName": "JIGGLYPUFF",
-       "x": 0.8135531135531135,
-       "y": 0.6798418972332015
+        "rawName":"JIGGLYPUFF",
+        "name":"jigglypuff"
      },
      {
-       "name": "peach",
-       "rawName": "PEACH",
-       "x": 0.7879120879120879,
-       "y": 0.04743083003952569
+        "rawName":"PEACH",
+        "name":"peach"
      },
      {
-       "name": "daisy",
-       "rawName": "DAISY",
-       "x": 0.14175824175824175,
-       "y": 0.5276679841897233
+        "rawName":"DAISY",
+        "name":"daisy"
      },
      {
-       "name": "bowser",
-       "rawName": "BOWSER",
-       "x": 0.3556776556776557,
-       "y": 0.2845849802371542
+        "rawName":"BOWSER",
+        "name":"bowser"
      },
      {
-       "name": "ice_climbers",
-       "rawName": "ICE CLIMBERS",
-       "x": 0.035897435897435895,
-       "y": 0.10869565217391304
+        "rawName":"ICE CLIMBERS",
+        "name":"ice_climbers"
      },
      {
-       "name": "sheik",
-       "rawName": "SHEIK",
-       "x": 0.3963369963369963,
-       "y": 0.0691699604743083
+        "rawName":"SHEIK",
+        "name":"sheik"
      },
      {
-       "name": "zelda",
-       "rawName": "ZELDA",
-       "x": 0.4043956043956044,
-       "y": 0.4644268774703557
+        "rawName":"ZELDA",
+        "name":"zelda"
      },
      {
-       "name": "dr_mario",
-       "rawName": "DR. MARIO",
-       "x": 0.04212454212454213,
-       "y": 0.5830039525691699
+        "rawName":"DR. MARIO",
+        "name":"dr_mario"
      },
      {
-       "name": "pichu",
-       "rawName": "PICHU",
-       "x": 0.4655677655677656,
-       "y": 0.5138339920948617
+        "rawName":"PICHU",
+        "name":"pichu"
      },
      {
-       "name": "falco",
-       "rawName": "FALCO",
-       "x": 0.36043956043956044,
-       "y": 0.05928853754940711
+        "rawName":"FALCO",
+        "name":"falco"
      },
      {
-       "name": "marth",
-       "rawName": "MARTH",
-       "x": 0.621978021978022,
-       "y": 0.4367588932806324
+        "rawName":"MARTH",
+        "name":"marth"
      },
      {
-       "name": "lucina",
-       "rawName": "LUCINA",
-       "x": 0.9307692307692308,
-       "y": 0.22727272727272727
+        "rawName":"LUCINA",
+        "name":"lucina"
      },
      {
-       "name": "young_link",
-       "rawName": "YOUNG LINK",
-       "x": 0.7362637362637363,
-       "y": 0.35375494071146246
+        "rawName":"YOUNG LINK",
+        "name":"young_link"
      },
      {
-       "name": "ganondorf",
-       "rawName": "GANONDORF",
-       "x": 0.6663003663003663,
-       "y": 0.04940711462450593
+        "rawName":"GANONDORF",
+        "name":"ganondorf"
      },
      {
-       "name": "mewtwo",
-       "rawName": "MEWTWO",
-       "x": 0.2549450549450549,
-       "y": 0.15217391304347827
+        "rawName":"MEWTWO",
+        "name":"mewtwo"
      },
      {
-       "name": "roy",
-       "rawName": "ROY",
-       "x": 0.5813186813186814,
-       "y": 0.4150197628458498
+        "rawName":"ROY",
+        "name":"roy"
      },
      {
-       "name": "chrom",
-       "rawName": "CHROM",
-       "x": 0.9743589743589743,
-       "y": 0.39723320158102765
+        "rawName":"CHROM",
+        "name":"chrom"
      },
      {
-       "name": "mr_game_and_watch",
-       "rawName": "MR. GAME &amp; WATCH",
-       "x": 0.01684981684981685,
-       "y": 0.5869565217391305
+        "rawName":"MR. GAME &amp; WATCH",
+        "name":"mr_game_and_watch"
      },
      {
-       "name": "meta_knight",
-       "rawName": "META KNIGHT",
-       "x": 0.924908424908425,
-       "y": 0.10276679841897234
+        "rawName":"META KNIGHT",
+        "name":"meta_knight"
      },
      {
-       "name": "pit",
-       "rawName": "PIT",
-       "x": 0.4901098901098901,
-       "y": 0.05928853754940711
+        "rawName":"PIT",
+        "name":"pit"
      },
      {
-       "name": "dark_pit",
-       "rawName": "DARK PIT",
-       "x": 0.319047619047619,
-       "y": 0.05731225296442688
+        "rawName":"DARK PIT",
+        "name":"dark_pit"
      },
      {
-       "name": "zero_suit_samus",
-       "rawName": "ZERO SUIT SAMUS",
-       "x": 0.6212454212454213,
-       "y": 0.2608695652173913
+        "rawName":"ZERO SUIT SAMUS",
+        "name":"zero_suit_samus"
      },
      {
-       "name": "wario",
-       "rawName": "WARIO",
-       "x": 0.8542124542124542,
-       "y": 0.5849802371541502
+        "rawName":"WARIO",
+        "name":"wario"
      },
      {
-       "name": "snake",
-       "rawName": "SNAKE",
-       "x": 0.2271062271062271,
-       "y": 0.5454545454545454
+        "rawName":"SNAKE",
+        "name":"snake"
      },
      {
-       "name": "ike",
-       "rawName": "IKE",
-       "x": 0.31868131868131866,
-       "y": 0.4209486166007905
+        "rawName":"IKE",
+        "name":"ike"
      },
      {
-       "name": "pokemon_trainer",
-       "rawName": "POKÉMON TRAINER",
-       "x": 0.7483516483516484,
-       "y": 0.5474308300395256
+        "rawName":"POKÉMON TRAINER",
+        "name":"pokemon_trainer"
      },
      {
-       "name": "diddy_kong",
-       "rawName": "DIDDY KONG",
-       "x": 0.4289377289377289,
-       "y": 0.04743083003952569
+        "rawName":"DIDDY KONG",
+        "name":"diddy_kong"
      },
      {
-       "name": "lucas",
-       "rawName": "LUCAS",
-       "x": 0.25970695970695973,
-       "y": 0.308300395256917
+        "rawName":"LUCAS",
+        "name":"lucas"
      },
      {
-       "name": "sonic",
-       "rawName": "SONIC",
-       "x": 0.10036630036630037,
-       "y": 0.6205533596837944
+        "rawName":"SONIC",
+        "name":"sonic"
      },
      {
-       "name": "king_dedede",
-       "rawName": "KING DEDEDE",
-       "x": 0.9146520146520146,
-       "y": 0.4762845849802372
+        "rawName":"KING DEDEDE",
+        "name":"king_dedede"
      },
      {
-       "name": "olimar",
-       "rawName": "OLIMAR",
-       "x": 0.32344322344322346,
-       "y": 0.7154150197628458
+        "rawName":"OLIMAR",
+        "name":"olimar"
      },
      {
-       "name": "lucario",
-       "rawName": "LUCARIO",
-       "x": 0.3047619047619048,
-       "y": 0.29446640316205536
+        "rawName":"LUCARIO",
+        "name":"lucario"
      },
      {
-       "name": "rob",
-       "rawName": "R.O.B.",
-       "x": 0.2549450549450549,
-       "y": 0.0691699604743083
+        "rawName":"R.O.B.",
+        "name":"rob"
      },
      {
-       "name": "toon_link",
-       "rawName": "TOON LINK",
-       "x": 0.1468864468864469,
-       "y": 0.019762845849802372
+        "rawName":"TOON LINK",
+        "name":"toon_link"
      },
      {
-       "name": "wolf",
-       "rawName": "WOLF",
-       "x": 0.5293040293040293,
-       "y": 0.33794466403162055
+        "rawName":"WOLF",
+        "name":"wolf"
      },
      {
-       "name": "villager",
-       "rawName": "VILLAGER",
-       "x": 0.8945054945054945,
-       "y": 0.6778656126482213
+        "rawName":"VILLAGER",
+        "name":"villager"
      },
      {
-       "name": "mega_man",
-       "rawName": "MEGA MAN",
-       "x": 0.5956043956043956,
-       "y": 0.6126482213438735
+        "rawName":"MEGA MAN",
+        "name":"mega_man"
      },
      {
-       "name": "wii_fit_trainer",
-       "rawName": "Wii Fit TRAINER",
-       "x": 0.0641025641025641,
-       "y": 0.3616600790513834
+        "rawName":"Wii Fit TRAINER",
+        "name":"wii_fit_trainer"
      },
      {
-       "name": "rosalina_and_luma",
-       "rawName": "ROSALINA &amp; LUMA",
-       "x": 0.5663003663003663,
-       "y": 0.2549407114624506
+        "rawName":"ROSALINA &amp; LUMA",
+        "name":"rosalina_and_luma"
      },
      {
-       "name": "little_mac",
-       "rawName": "LITTLE MAC",
-       "x": 0.3435897435897436,
-       "y": 0.5217391304347826
+        "rawName":"LITTLE MAC",
+        "name":"little_mac"
      },
      {
-       "name": "greninja",
-       "rawName": "GRENINJA",
-       "x": 0.1794871794871795,
-       "y": 0.66600790513834
+        "rawName":"GRENINJA",
+        "name":"greninja"
      },
      {
-       "name": "mii_fighter",
-       "rawName": "Mii FIGHTER",
-       "x": 0.16556776556776556,
-       "y": 0.22529644268774704
+        "rawName":"Mii FIGHTER",
+        "name":"mii_fighter"
      },
      {
-       "name": "palutena",
-       "rawName": "PALUTENA",
-       "x": 0.8593406593406593,
-       "y": 0.05533596837944664
+        "rawName":"PALUTENA",
+        "name":"palutena"
      },
      {
-       "name": "pac_man",
-       "rawName": "PAC-MAN",
-       "x": 0.5688644688644688,
-       "y": 0.045454545454545456
+        "rawName":"PAC-MAN",
+        "name":"pac_man"
      },
      {
-       "name": "robin",
-       "rawName": "ROBIN",
-       "x": 0.9538461538461539,
-       "y": 0.6284584980237155
+        "rawName":"ROBIN",
+        "name":"robin"
      },
      {
-       "name": "shulk",
-       "rawName": "SHULK",
-       "x": 0.6871794871794872,
-       "y": 0.09486166007905138
+        "rawName":"SHULK",
+        "name":"shulk"
      },
      {
-       "name": "bowser_jr",
-       "rawName": "BOWSER JR.",
-       "x": 0.7168498168498169,
-       "y": 0.019762845849802372
+        "rawName":"BOWSER JR.",
+        "name":"bowser_jr"
      },
      {
-       "name": "duck_hunt",
-       "rawName": "DUCK HUNT",
-       "x": 0.9769230769230769,
-       "y": 0.14624505928853754
+        "rawName":"DUCK HUNT",
+        "name":"duck_hunt"
      },
      {
-       "name": "ryu",
-       "rawName": "RYU",
-       "x": 0.8787545787545787,
-       "y": 0.07509881422924901
+        "rawName":"RYU",
+        "name":"ryu"
      },
      {
-       "name": "ken",
-       "rawName": "KEN",
-       "x": 0.22783882783882783,
-       "y": 0.1956521739130435
+        "rawName":"KEN",
+        "name":"ken"
      },
      {
-       "name": "cloud",
-       "rawName": "CLOUD",
-       "x": 0.41098901098901097,
-       "y": 0.5513833992094862
+        "rawName":"CLOUD",
+        "name":"cloud"
      },
      {
-       "name": "corrin",
-       "rawName": "CORRIN",
-       "x": 0.03076923076923077,
-       "y": 0.42292490118577075
+        "rawName":"CORRIN",
+        "name":"corrin"
      },
      {
-       "name": "bayonetta",
-       "rawName": "BAYONETTA",
-       "x": 0.16923076923076924,
-       "y": 0.03162055335968379
+        "rawName":"BAYONETTA",
+        "name":"bayonetta"
      },
      {
-       "name": "inkling",
-       "rawName": "INKLING",
-       "x": 0.5366300366300366,
-       "y": 0.5592885375494071
+        "rawName":"INKLING",
+        "name":"inkling"
      },
      {
-       "name": "ridley",
-       "rawName": "RIDLEY",
-       "x": 0.954945054945055,
-       "y": 0.05138339920948617
+        "rawName":"RIDLEY",
+        "name":"ridley"
      },
      {
-       "name": "simon",
-       "rawName": "SIMON",
-       "x": 0.09413919413919414,
-       "y": 0.3774703557312253
+        "rawName":"SIMON",
+        "name":"simon"
      },
      {
-       "name": "richter",
-       "rawName": "RICHTER",
-       "x": 0.8882783882783882,
-       "y": 0.33992094861660077
+        "rawName":"RICHTER",
+        "name":"richter"
      },
      {
-       "name": "king_k_rool",
-       "rawName": "KING K. ROOL",
-       "x": 0.2875457875457875,
-       "y": 0.08300395256916997
+        "rawName":"KING K. ROOL",
+        "name":"king_k_rool"
      },
      {
-       "name": "shizue",
-       "rawName": "ISABELLE",
-       "x": 0.35824175824175825,
-       "y": 0.6185770750988142
+        "rawName":"ISABELLE",
+        "name":"shizue"
      },
      {
-       "name": "gaogaen",
-       "rawName": "INCINEROAR",
-       "x": 0.8399267399267399,
-       "y": 0.43478260869565216
+        "rawName":"INCINEROAR",
+        "name":"gaogaen"
      }
-   ]
- }
- 
+  ]
+}

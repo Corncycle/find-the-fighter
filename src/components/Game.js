@@ -2,8 +2,10 @@ import muralImg from "../images/mural-quarter.jpg"
 import xSvg from "../images/x.svg"
 import CharacterCard from "./CharacterCard"
 
-import { charData, charDataByName } from "../util"
+import { charDataByName } from "../util"
 import { useState } from "react"
+
+import { getCharCoords } from "../firebase"
 
 const xTolerance = 0.025
 const yTolerance = 0.3
@@ -28,7 +30,7 @@ function updatePromptLocation() {
   }
 }
 
-function isValidGuess(character, xPct, yPct) {
+/*function isValidGuess(character, xPct, yPct) {
   let char
   for (const c of charData.characters) {
     if (c.name === character) {
@@ -41,6 +43,16 @@ function isValidGuess(character, xPct, yPct) {
     xPct >= char.x - xTolerance &&
     yPct >= char.y &&
     yPct <= char.y + yTolerance
+  )
+}*/
+
+async function isValidGuess(character, xPct, yPct) {
+  const { x, y } = await getCharCoords(character)
+  return (
+    xPct <= x + xTolerance &&
+    xPct >= x - xTolerance &&
+    yPct >= y &&
+    yPct <= y + yTolerance
   )
 }
 
@@ -100,9 +112,9 @@ export default function Game({ gameState, dispatch, imgLocs }) {
                 <li
                   key={i}
                   className="prompt-name"
-                  onClick={(e) => {
+                  onClick={async (e) => {
                     if (!gameState.charsFound.includes(name)) {
-                      if (isValidGuess(name, promptXPct, promptYPct)) {
+                      if (await isValidGuess(name, promptXPct, promptYPct)) {
                         dispatch({ type: "find_character", name: name })
                       } else {
                         setXSymbols(
