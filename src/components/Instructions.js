@@ -34,8 +34,18 @@ export default function Instructions({
                 className="submit-score-form flex center"
                 onSubmit={(e) => {
                   e.preventDefault()
-                  submitScore(currName, time)
-                  dispatch({ type: "hide_submit_form" })
+                  if (currName.length === 0 || currName.length > 20) {
+                    console.log("bad!")
+                    const inputNode = document.querySelector(".submit-text")
+                    inputNode.setCustomValidity(
+                      "Names must be between 1 and 20 characters"
+                    )
+                    inputNode.reportValidity()
+                  } else {
+                    console.log("we good")
+                    submitScore(currName, time)
+                    dispatch({ type: "hide_submit_form" })
+                  }
                 }}
               >
                 <input
@@ -44,6 +54,7 @@ export default function Instructions({
                   placeholder="Your Name"
                   value={currName}
                   onInput={(e) => {
+                    e.target.setCustomValidity("")
                     setCurrName(e.target.value)
                   }}
                 />
