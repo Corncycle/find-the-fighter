@@ -424,6 +424,32 @@ html, body, #root {
     outline: 3px solid var(--bronze);
 }*/
 
+.about-container {
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.about-item {
+    text-align: center;
+    line-height: 1.25;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.about-link {
+    color: orangered;
+}
+
+.about-link:hover:not(:active) {
+    color: yellow;
+    animation: 1s linear infinite fake-gradient-color;
+}
+
+.about-link:active {
+    color: yellow;
+}
+
 @keyframes loading-ellipsis {
     0% {
         content: ""
@@ -467,6 +493,20 @@ html, body, #root {
 
     100% {
         border-color: var(--border-color-1);
+    }
+}
+
+@keyframes fake-gradient-color {
+    0% {
+        color: orangered;
+    }
+    
+    50% {
+        color: orange;
+    }
+
+    100% {
+        color: orangered;
     }
 }
 
