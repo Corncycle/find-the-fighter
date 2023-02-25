@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/find-the-fighter/static/css/main.3d936aff.css",
-    "main.js": "/find-the-fighter/static/js/main.31139328.js",
+    "main.js": "/find-the-fighter/static/js/main.a7cfa478.js",
     "static/media/mural-quarter.jpg": "/find-the-fighter/static/media/mural-quarter.51587d2c0566f1e6b7b3.jpg",
     "static/media/homura.png": "/find-the-fighter/static/media/homura.fe1f6dd2da20e442077e.png",
     "static/media/dark_samus.png": "/find-the-fighter/static/media/dark_samus.a0333623bdb2aca631a8.png",
@@ -90,10 +90,10 @@
     "index.html": "/find-the-fighter/index.html",
     "static/media/x.svg": "/find-the-fighter/static/media/x.c76ad28c33323dfe86ec1e4bcf9c5b6c.svg",
     "main.3d936aff.css.map": "/find-the-fighter/static/css/main.3d936aff.css.map",
-    "main.31139328.js.map": "/find-the-fighter/static/js/main.31139328.js.map"
+    "main.a7cfa478.js.map": "/find-the-fighter/static/js/main.a7cfa478.js.map"
   },
   "entrypoints": [
     "static/css/main.3d936aff.css",
-    "static/js/main.31139328.js"
+    "static/js/main.a7cfa478.js"
   ]
 }
