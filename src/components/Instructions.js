@@ -35,14 +35,12 @@ export default function Instructions({
                 onSubmit={(e) => {
                   e.preventDefault()
                   if (currName.length === 0 || currName.length > 20) {
-                    console.log("bad!")
                     const inputNode = document.querySelector(".submit-text")
                     inputNode.setCustomValidity(
                       "Names must be between 1 and 20 characters"
                     )
                     inputNode.reportValidity()
                   } else {
-                    console.log("we good")
                     submitScore(currName, time)
                     dispatch({ type: "hide_submit_form" })
                   }

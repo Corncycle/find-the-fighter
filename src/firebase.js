@@ -24,8 +24,12 @@ const app = initializeApp(firebaseConfig)
 export const db = getFirestore(app)
 
 export async function getCharCoords(name) {
-  const char = await getDoc(doc(db, "fighter-data", name))
-  return char.data()
+  try {
+    const char = await getDoc(doc(db, "fighter-data", name))
+    return char.data()
+  } catch (e) {
+    console.error("Failed to retrieve fighter data: " + e)
+  }
 }
 
 export async function submitScore(name, time) {
